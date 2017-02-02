@@ -74,8 +74,7 @@ li {
 	cursor: pointer;
 }
 
-.menu__element:hover > .menu__link{
-	/*text-decoration: underline;*/
+.menu__element:hover > .menu__link {
 	border-bottom: 2px solid #edbfff;
 }
 
@@ -739,20 +738,35 @@ footer {
 		left: 65%;
 		width: 244px;
 		height: 257px;
-		border: 1px solid #000;
+		border: 1px solid transparent;
 		border-radius: 9px;
 		margin: 108px 0 0 -151px;
 		padding: 0 0 0 0;
 		text-align: center;
-		background: rgba(60, 47, 68, 0.9);
+		/*background: rgba(60, 47, 68, 0.9);*/
 	}
+
+
 	.menu__element {
-		display: block;
+		display: none;
 		height: 31px;
 		border-top: 1px solid #5f486a;
 		border-bottom: 1px solid #36283e;
 		margin: 0 0 0 0;
 		padding: 10px 0 0 0;
+	}
+
+	.menu__current	{
+		display: block;
+		height: 31px;
+		margin: 0 0 0 0;
+		padding: 10px 0 0 0;
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+	}
+
+	.current__link {
+		border-bottom: 2px solid #edbfff;
 	}
 
 	.slider__left_arrow {
@@ -761,6 +775,24 @@ footer {
 
 	.slider__right_arrow {
 		margin-top: 105px;
+	}
+
+	.menu__element:hover > .menu__link  {
+		border: none;
+	}
+
+	.menu__element:hover > .current__link  {
+		border-bottom: 2px solid #edbfff;
+	}
+	
+	.menu__header:hover {
+		background: rgba(60, 47, 68, 0.9);
+		border: 1px solid #000;
+	}
+
+	.menu__header:hover li {
+		display: block;
+		padding: 10px 0 0 0;
 	}
 
 	.menu__link:hover {
@@ -1032,7 +1064,7 @@ footer {
 	.menu {
 		position: absolute;
 		top: 65px;
-		left: 223px;
+		left: 65%;
 		width: 244px;
 		height: 257px;
 		border: 1px solid #000;
